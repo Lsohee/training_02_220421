@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #root{
+      width:100vw;
+      height:100vh;
+      background-color: aquamarine;
+    }
+     */
+  </style>
+</head>
+<body>
+  <div id="root">
+    
+    
+  </div>
+  
+  <script>
+    const root = document.getElementById("root");
+    // getElementById는 인수(argument)로 문자열만 받는 규칙이 있음
+    const data = document.querySelector("#root")
+
+    let back = 100;
+    
+    
+    root.style.width = back+"vw";
+    root.style.height = back+"vh";
+    root.style.backgroundColor = "black";
+    
+    
+    console.dir(root);
+    const member = ["나는","너무","너도","더","너 때문에","코딩","기획","운동"];
+    let count = 0;
+    root.addEventListener("click", function(){
+      let back2 = back * 2;
+      root.style.height = back2+"vh";
+      root.style.width = back2 + "vw";
+      root.textContent= `${member[count]} 힘들어`;
+      count = count+1;
+      root.style.backgroundColor="darkGray";
+      if(count > member.length-1){
+      count = 0;
+
+      }
+    });
+    
+    
+    
+        console.log(root);
+  </script>
+</body>
+</html>
